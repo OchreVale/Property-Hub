@@ -1,5 +1,8 @@
 <?php
-session_start()
+session_start();
+if(is_null($_SESSION["firstname"])){
+    header("Location:signup.php");
+}
 ?>
 <!DOCTYPE html>
 <html>
@@ -23,6 +26,7 @@ if($results->num_rows ==1){
     while($row = mysqli_fetch_assoc($results)){
         $_SESSION["firstname"] = $row["firstname"];
         $_SESSION["lastname"] = $row["lastname"];
+        $_SESSION["ID"] = $row["ID"];
         header("Location:home.php");
     }
 }
