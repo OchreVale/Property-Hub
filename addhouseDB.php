@@ -12,11 +12,12 @@ $city = $_POST["city"];
 $sold = 0;
 $zip= $_POST["zip"];
 $state = $_POST["state"];
-$IMG = $_POST["IMG"];
 $floor =$_POST["floor"];
+$year = $_POST["year"];
+$parking = $_POST["parking"];
 include 'connect.php';
-$sql ="INSERT INTO Homes (street, city, state, zip, country, price, sold, Floor, IMG, seller_id)
-VALUES('$street', '$city', '$state', '$zip', '$country', '$price', '$sold', '$floor', '$IMG', '$seller_id')";
+$sql ="INSERT INTO Homes (street, city, state, zip, country, price, sold, Floor, seller_id, parking, year)
+VALUES('$street', '$city', '$state', '$zip', '$country', '$price', '$sold', '$floor','$seller_id', '$parking', '$year')";
 if($conn->query($sql) === TRUE){
     header("Location:addhome.php");
 }

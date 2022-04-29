@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html>
-    <head>Buy this house</head>
     <body>
-        Buy this house.
         <?php
         session_start();
         include 'connect.php';
@@ -22,7 +20,9 @@
                 echo "<img src ='house.jpeg' alt= 'house' style = '
                 height: 200px; width:200px'/> <br/>";
                 echo "Listing price: ".$row["price"]."<br/>";
-                echo "Square footage: 2000 <br/>";
+                echo "Square footage:".$row["Floor"]."</br>";
+                echo "Parking:".$row["parking"]."</br>";
+                echo "Year:".$row["year"]."</br>";
 
                 echo "</div>";
             }
