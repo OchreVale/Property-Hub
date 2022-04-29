@@ -4,3 +4,15 @@ input{
     display: block;
     height: 40px;
 }
+.list{
+    margin: auto;
+    font-family: 'Times New Roman', Times, serif;
+    align-content: center;
+    font-weight: bold;
+}
+.left{
+    height: 1200px;
+    width: 328px;
+    position:absolute;
+
+}

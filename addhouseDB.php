@@ -18,7 +18,7 @@ include 'connect.php';
 $sql ="INSERT INTO Homes (street, city, state, zip, country, price, sold, Floor, IMG, seller_id)
 VALUES('$street', '$city', '$state', '$zip', '$country', '$price', '$sold', '$floor', '$IMG', '$seller_id')";
 if($conn->query($sql) === TRUE){
-    echo "Success";
+    header("Location:addhome.php");
 }
 else{
     echo mysqli_error($conn);
