@@ -1,8 +1,8 @@
 <?php
-session_start();
+/* session_start();
 if(is_null($_SESSION["firstname"])){
     header("Location:signup.php");
-}
+} */
 ?>
 <!DOCTYPE html>
 <html>

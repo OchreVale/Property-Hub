@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html>
+	<head>
+		<link rel="stylesheet" href="index.css">
+	</head>
     <body>
+		<fieldset class="buy">
+		<legend>Current Listings</legend>
         <?php
         session_start();
         include 'connect.php';
@@ -32,5 +37,6 @@
         }
         include "checkout.php"
         ?>
+		</fieldset>
     </body>
 </html>

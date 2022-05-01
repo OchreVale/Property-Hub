@@ -2,7 +2,9 @@
 <html>
     <head>
         <title>Dashboard</title>
+		<link rel="stylesheet" href="index.css">
     </head>
+	<fieldset>
     <?php
     include "connect.php";
     $Users= "SELECT COUNT(ID) FROM Users";
@@ -25,4 +27,5 @@
     echo " in dollars!"
     
     ?>
+	</fieldset>
 </html>

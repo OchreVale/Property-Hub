@@ -8,18 +8,20 @@
     <body>
         <div class="nav"></div>
         <form action="addUser.php" method="POST">
-            <input name ="firstname" type="text" required placeholder="First Name"/>
-            <input name=" lastname" type="text" required placeholder="Last Name"/>
-            <input name ="username"type="text" placeholder="Username" required/>
-            <input name="password"type="password" placeholder="Password" required/>
-            <input type="submit" value=" Sign up"/> <a href="login.php">Already have an account? Login</a>
+			<fieldset>
+				<input name ="firstname" type="text" required placeholder="First Name"/>
+				<input name=" lastname" type="text" required placeholder="Last Name"/>
+				<input name ="username"type="text" placeholder="Username" required/>
+				<input name="password"type="password" placeholder="Password" required/>
+				<input type="submit" value=" Sign up"/> <a href="login.php">Already have an account? Login</a>
+			</fieldset>
         </form>
         <?php
         $servername = "localhost";
-        $username = "root";
-        $password = "root"; 
-        $db_name = "practice";
-        $db_port = 8889;
+		$username = "root";
+		$password = "root"; 
+		$db_name = "practice";
+		$db_port = 8889;
         $conn = new mysqli($servername, $username, $password, $db_name, $db_port);
         if($conn->connect_error){
             die("Couldn't connect to the database");

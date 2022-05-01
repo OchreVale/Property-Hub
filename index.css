@@ -1,10 +1,20 @@
+*{
+	margin: auto;
+}
+
+body{
+	background-color: grey;
+}
 
 input{
     outline: none;
     display: block;
     height: 40px;
+	background-color: white;
+	margin-top: 10px;
+	margin-bottom: 10px;
 }
-.list{
+.listing{
     margin: auto;
     font-family: 'Times New Roman', Times, serif;
     align-content: center;
@@ -14,5 +24,23 @@ input{
     height: 1200px;
     width: 328px;
     position:absolute;
+	background-color: #1A7AC5;
+	border: 3px solid black;
+	border-radius:20px;
+	-moz-border-radius:20px;
+	-webkit-border-radius:20px;
+}
 
+fieldset{
+	background-color: #1A7AC5;
+	border: 3px solid black;
+	border-radius:20px;
+	-moz-border-radius:20px;
+	-webkit-border-radius:20px;
+	width: 15%;
+	background-clip: padding-box;
+}
+
+.buy{
+	width: 500px;
 }
