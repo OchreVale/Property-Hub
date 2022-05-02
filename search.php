@@ -1,37 +1,20 @@
 <?php
-session_start();
-if(is_null($_SESSION["firstname"])){
-    header("Location:signup.php");
-} 
+if($_SERVER["REQUEST_METHOD"] ==="GET"){
+    header("Location:home.php");
+}
+$query = $_POST["query"];
 ?>
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Welcome home</title>
-        <link rel="stylesheet" href="index.css">
-        <style> 
-        <?php
-        include "index.css";
+        <?php 
+        echo "<title>".$query."</title>";
         ?>
-    </style>
     </head>
     <body>
-    <div class="left">
     <?php
-        echo "<h1>Welcome home ".$_SESSION["firstname"]."!</h1>";
-        ?>
-        <a href="logout.php">Log out</a>
-        <form action="search.php" method="POST">
-            <input type="number" name="query" placeholder="Enter a zipcode"/>
-            <input type="submit" value="Search a house"/>
-        </form>
-        <a href="addhome.php" target="_blank"> Sell your house here.</a>
-</br>
-        <a href="dashboard.php">See our stats!</a>
-    </div>
-        <?php
         include 'connect.php';
-        $sql = "SELECT * FROM Homes WHERE sold = 0";
+        $sql = "SELECT * FROM Homes WHERE sold = 0 AND zip= '$query'";
         $results = $conn->query($sql);
         setlocale(LC_MONETARY,"en_US");
         if($results->num_rows>0){
@@ -47,8 +30,9 @@ if(is_null($_SESSION["firstname"])){
             }
         }
         else{
-            echo "No listing available.";
+            echo "No listing available in ".$query.".";
         }
         ?>
+    </body>
     </body>
 </html>
