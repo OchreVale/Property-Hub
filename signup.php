@@ -17,14 +17,7 @@
 			</fieldset>
         </form>
         <?php
-        $servername = "localhost";
-		$username = "root";
-		$password = ""; 
-		$db_name = "practice";
-        $conn = new mysqli($servername, $username, $password, $db_name);
-        if($conn->connect_error){
-            die("Couldn't connect to the database");
-        }
+        include "connect.php";
         $sql = "CREATE TABLE Users (ID int AUTO_INCREMENT, PRIMARY KEY (ID), firstname VARCHAR(50), lastname VARCHAR(50),
          username VARCHAR(50) UNIQUE, password VARCHAR(50))";
         if ($conn->query($sql) === TRUE){

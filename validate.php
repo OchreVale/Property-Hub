@@ -7,14 +7,7 @@ if(is_null($_SESSION["firstname"])){
 <!DOCTYPE html>
 <html>
     <?php
-$servername = "localhost";
-$username = "root";
-$password = ""; 
-$db_name = "practice";
-$conn = new mysqli($servername, $username, $password, $db_name);
-if($conn->connect_error){
-    die("Something went wrong.");
-}
+include "connect.php";
 $name = $_POST["username"];
 $password = $_POST["password"];
 $query = "SELECT * FROM Users WHERE username ='$name' and password = '$password'";
