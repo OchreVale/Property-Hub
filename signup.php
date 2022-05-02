@@ -32,7 +32,7 @@
         }
         $sql = "CREATE TABLE Homes (ID int AUTO_INCREMENT, PRIMARY KEY (ID), street VARCHAR (25), city  VARCHAR(50),
         state VARCHAR(25), zip INT, country VARCHAR(25) , price INT(255),
-         sold BOOLEAN, Floor INT, seller_ID INT, FOREIGN KEY(seller_ID) REFERENCES Users(ID))";
+         sold BOOLEAN, Floor INT, seller_ID INT, parking INT, year INT, FOREIGN KEY(seller_ID) REFERENCES Users(ID))";
        if($conn->query($sql) === TRUE){
            echo "created a home database";
        }
