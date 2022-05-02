@@ -19,10 +19,9 @@
         <?php
         $servername = "localhost";
 		$username = "root";
-		$password = "root"; 
+		$password = ""; 
 		$db_name = "practice";
-		$db_port = 8889;
-        $conn = new mysqli($servername, $username, $password, $db_name, $db_port);
+        $conn = new mysqli($servername, $username, $password, $db_name);
         if($conn->connect_error){
             die("Couldn't connect to the database");
         }
