@@ -10,8 +10,10 @@ $query = $_POST["query"];
         <?php 
         echo "<title>".$query."</title>";
         ?>
+		<link rel="stylesheet" href="index.css">
     </head>
     <body>
+	<fieldset class="buy">
     <?php
         include 'connect.php';
         $sql = "SELECT * FROM Homes WHERE sold = 0 AND zip= '$query'";
@@ -33,6 +35,6 @@ $query = $_POST["query"];
             echo "No listing available in ".$query.".";
         }
         ?>
-    </body>
+	</fieldset>
     </body>
 </html>
